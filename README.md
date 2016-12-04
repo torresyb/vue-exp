@@ -1,4 +1,5 @@
 # my-project
+vue2- vuex2- vue-router
 
 To start:
 
