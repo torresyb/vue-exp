@@ -1,26 +1,26 @@
 <template>
   <div id="app">
-    <router-view></router-view>
+    <bi-header></bi-header>
+    <bi-side></bi-side>
+    <transition name="fade" mode="out-in">
+      <router-view id="content"></router-view>
+    </transition>
   </div>
 </template>
 
+<script>
+import '../assets/css/common.css'
+import BiHeader from '../components/BiHeader'
+import BiSide from '../components/BiSide'
+
+export default {
+  components: {
+    BiHeader,
+    BiSide
+  }
+}
+</script>
+
 <style>
-body {
-  margin: 0;
-  font-size: 2rem;
-  font-family: -apple-system, BlinkMacSystemFont,
-               'avenir next', avenir,
-               helvetica, 'helvetica neue',
-               Ubuntu,
-               'segoe ui', arial,
-               sans-serif;
-}
-.page {
-  text-align: center;
-}
-code {
-  background-color: #f0f0f0;
-  padding: 3px 5px;
-  border-radius: 2px;
-}
+
 </style>

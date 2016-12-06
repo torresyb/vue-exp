@@ -18,7 +18,8 @@ module.exports = {
     extensions: ['', '.js', '.vue', '.css', '.json'],
     alias: {
       root: path.join(__dirname, '../client'),
-      components: path.join(__dirname, '../client/components')
+      components: path.join(__dirname, '../client/components'),
+      static: path.resolve(__dirname, '../static')
     }
   },
   module: {
@@ -36,11 +37,19 @@ module.exports = {
         test: /\.es6$/,
         loaders: ['babel']
       },
+      // {
+      //   test: /\.(png|jpg|gif|svg)$/,
+      //   loader: 'url-loader',
+      //   options: {
+      //     limit: 10000,
+      //     name: '[name].[ext]?[hash]'
+      //   }
+      // },
       {
         test: /\.(ico|jpg|png|gif|eot|otf|webp|svg|ttf|woff|woff2)(\?.*)?$/,
         loader: 'file',
         query: {
-          name: 'static/media/[name].[hash:8].[ext]'
+          name: 'static/[name].[hash:8].[ext]'
         }
       }
     ]

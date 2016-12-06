@@ -3,7 +3,7 @@ const pkg = require('../package')
 
 module.exports = {
   port: 4000,
-  title: 'my-project',
+  title: 'BI系统',
   vendor: Object.keys(pkg.dependencies),
   babel: {
     babelrc: false,
