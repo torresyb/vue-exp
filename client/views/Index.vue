@@ -6,6 +6,7 @@
 	<hr>
 	<index-line></index-line>
 	<index-funnel></index-funnel>
+  <index-map></index-map>
   </div>
 </template>
 
@@ -15,13 +16,15 @@ import BiUsertype from '../components/BiUsertype'
 import IndexLine from '../components/index/IndexLine'
 import IndexFunnel from '../components/index/IndexFunnel'
 import IndexTable from '../components/index/IndexTable'
+import IndexMap from '../components/index/IndexMap'
 export default {
   components: {
     BiLink,
     BiUsertype,
     IndexLine,
     IndexFunnel,
-    IndexTable
+    IndexTable,
+    IndexMap
   }
 }
 </script>
