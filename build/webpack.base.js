@@ -46,6 +46,10 @@ module.exports = {
       //   }
       // },
       {
+        test: /\.scss$/,
+        loader:'style!css!sass'
+      },
+      {
         test: /\.(ico|jpg|png|gif|eot|otf|webp|svg|ttf|woff|woff2)(\?.*)?$/,
         loader: 'file',
         query: {
@@ -64,6 +68,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: config.title,
       template: __dirname + '/index.html',
+      favicon: __dirname+'/bi_logo.ico',
       filename: _.outputIndexPath
     })
   ],
